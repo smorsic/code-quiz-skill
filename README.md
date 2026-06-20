@@ -21,7 +21,7 @@ Use the [`skills` npm package](https://www.npmjs.com/package/skills) to install 
 npx skills add smorsic/code-quiz-skill
 ```
 
-Use the **Project** scope for this skill so that configuration applies
+Use the **Project** scope for this skill so that the `config.json` file can be applied for your project.
 
 ## Use (Claude Example)
 
