@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readFileSync, readdirSync, statSync } from "node:fs";
+import { readFileSync, readdirSync, realpathSync, statSync } from "node:fs";
 import { join, dirname, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
@@ -103,9 +103,7 @@ const main = () => {
         die(`scope is outside the git repository: ${scopeArg}`);
       }
       if (scopeRel) {
-        out = out.filter(
-          (f) => f === scopeRel || f.startsWith(scopeRel + "/"),
-        );
+        out = out.filter((f) => f === scopeRel || f.startsWith(scopeRel + "/"));
       }
     }
     return out;
@@ -156,6 +154,9 @@ const main = () => {
   console.log(files[Math.floor(Math.random() * files.length)]);
 };
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
+if (
+  process.argv[1] &&
+  realpathSync(process.argv[1]) === fileURLToPath(import.meta.url)
+) {
   main();
 }

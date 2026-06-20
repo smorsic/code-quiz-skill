@@ -21,6 +21,8 @@ Use the [`skills` npm package](https://www.npmjs.com/package/skills) to install 
 npx skills add smorsic/code-quiz-skill
 ```
 
+Use the **Project** scope for this skill so that configuration applies
+
 ## Use (Claude Example)
 
 Once installed, invoke the skill from inside a project with `/code-quiz`. Claude will pick a random eligible file, ask about its purpose (either the whole file or a specific utility inside it, depending on the content), and grade your answer with line references.
