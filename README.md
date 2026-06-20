@@ -3,7 +3,7 @@
 Version: 0.1.0
 
 This skill instructs an agent to pop quiz you on the purpose of some piece of code in your repository, using a configurable
-script to pick a random code file for an agent to ask you about. This helps you do maintain your project knowledge in an easy, bite-sized way that you may even find fun.
+script to pick a random code file for an agent to ask you about. This may help you maintain your project knowledge in an easy, bite-sized way that you may even find fun.
 
 Not every project can be developed blindly, and having knowledge of a codebase
 can even speed up your development as a peer with an agent, by being able to reference code off the top of your head
